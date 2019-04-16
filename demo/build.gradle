@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile project(':library')
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // Playlist support
+    compile 'com.devbrackets.android:playlistcore:1.1.1'
+
+    // Memory Leak diagnostics
+    compile 'com.squareup.leakcanary:leakcanary-android:1.5'
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.devbrackets.android.exomediademo"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+}
